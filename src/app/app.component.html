@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="content">
+        <h2>Currency Converter</h2>
+        <b>ENTER AMOUNT:</b><br><br>
+        <input id="country" type="number" [(ngModel)]="amount" (change)="convertAmount()"
+            style="border:1px solid black ; width:190px ; height:20px ;"><br>
+
+         <p style="margin-left: 25%;">US DOLLOR</p>
+
+        <img src="/assets/convert-image.png" style="height: 40px; width:25px ; margin-left:40% ; margin-top:2% ;" alt="">
+
+        <p style="margin-left: 19%;">INDIAN RUPEES</p>
+         <button ng-click="convert()"style="margin-left:1% ; height:25px;width: 194px; margin-top: 10%;">CONVERT</button> 
+         <h3>{{outputAmount|currency:"INR"}}</h3>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
